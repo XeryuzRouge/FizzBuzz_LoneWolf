@@ -7,19 +7,19 @@ public class FizzBuzz {
 
     ArrayList<String> list = new ArrayList<String>();
 
-    String element = "";
+    String element;
 
     for (int i = 1; i<=length; i++) {
+      element = "";
       if (i % 3 == 0) {
-        element = "Fizz";
+        element += "Fizz";
       }
       if (i % 5 == 0) {
-        element = "Buzz";
+        element += "Buzz";
       }
       if (element == "") {
         list.add(Integer.toString(i));
-      }
-      else {
+      } else {
          list.add(element);
       }
     }

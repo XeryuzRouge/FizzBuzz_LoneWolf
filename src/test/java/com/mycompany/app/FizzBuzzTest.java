@@ -1,27 +1,34 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 import com.mycompany.app.FizzBuzz;
 
 import java.util.*;
 
 class FizzBuzzTests {
 
+  public List<String> list;
+
+  @BeforeEach public void setupFizzBuzzList() {
+    list = FizzBuzz.generate(100);
+  }
+
   @Test public void getFizzForMultipliersOf3() {
-
-    List<String> list = FizzBuzz.generate(93);
-
     for (int i : Arrays.asList(3, 6, 9, 12, 57, 93)) {
-      assertEquals("Fizz", list.get(i-1), Integer.toString(i-1));
+      assertEquals("Fizz", list.get(i-1), Integer.toString(i));
     }
   }
 
   @Test public void getBuzzForMultipliersOf5() {
+    for (int i : Arrays.asList(5, 10, 20, 35, 40, 50, 95)) {
+      assertEquals("Buzz", list.get(i-1), Integer.toString(i));
+    }
+  }
 
-    List<String> list = FizzBuzz.generate(50);
-
-    for (int i : Arrays.asList(5, 10, 20, 35, 40, 50)) {
-      assertEquals("Buzz", list.get(i-1), Integer.toString(i-1));
+  @Test public void getFizzAndBuzzForMultipliersOf3And5() {
+    for (int i : Arrays.asList(15, 30, 45, 60, 75, 60, 90)) {
+      assertEquals("FizzBuzz", list.get(i-1), Integer.toString(i));
     }
   }
 
