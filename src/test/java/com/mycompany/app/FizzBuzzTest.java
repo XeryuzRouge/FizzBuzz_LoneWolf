@@ -7,8 +7,13 @@ import java.util.*;
 
 class FizzBuzzTests {
 
-  @Test public void generate1To10List() {
-  assertEquals(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), FizzBuzz.generate(10));
+  @Test public void getFizzForMultipliersOf3() {
+
+    List<String> list = FizzBuzz.generate(12);
+
+    for (int i : Arrays.asList(3, 6, 9, 12)) {
+      assertEquals("Fizz", list.get(i-1));
+    }
   }
 
 }

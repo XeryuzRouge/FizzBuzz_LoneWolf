@@ -5,10 +5,13 @@ public class FizzBuzz {
 
   public static List generate(int length) {
 
-    ArrayList<Integer> list = new ArrayList<Integer>();
-
-    for (int i = 0; i<length; i++) {
-      list.add(i + 1);
+    ArrayList<String> list = new ArrayList<String>();
+    for (int i = 1; i<=length; i++) {
+      if (i % 3 == 0) {
+        list.add("Fizz");
+      } else {
+        list.add(Integer.toString(i));
+      }
     }
     return list;
   }
