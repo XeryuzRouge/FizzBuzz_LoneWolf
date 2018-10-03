@@ -17,7 +17,7 @@ public class FizzBuzz {
       if (i % 5 == 0) {
         element += "Buzz";
       }
-      if (element == "") {
+      if (element.isEmpty()) {
         list.add(Integer.toString(i));
       } else {
          list.add(element);

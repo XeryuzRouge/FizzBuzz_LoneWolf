@@ -32,4 +32,10 @@ class FizzBuzzTests {
     }
   }
 
+  @Test public void getIntegerForNotMultipliersOf3Or5() {
+    for (int i : Arrays.asList(7, 22, 31, 47, 53, 68, 79, 82, 94)) {
+      assertEquals(Integer.toString(i), list.get(i-1), Integer.toString(i));
+    }
+  }
+
 }
