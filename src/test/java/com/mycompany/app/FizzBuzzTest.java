@@ -7,7 +7,8 @@ import java.util.*;
 
 class FizzBuzzTests {
 
-  @Test public void return1To3() {
-  assertEquals(Arrays.asList(1, 2, 3), FizzBuzz.generate(3));
+  @Test public void generate1To10List() {
+  assertEquals(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), FizzBuzz.generate(10));
   }
+
 }

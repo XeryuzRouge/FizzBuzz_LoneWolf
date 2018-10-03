@@ -4,7 +4,13 @@ import java.util.*;
 public class FizzBuzz {
 
   public static List generate(int length) {
-    return Arrays.asList(1, 2, 3);
+
+    ArrayList<Integer> list = new ArrayList<Integer>();
+
+    for (int i = 0; i<length; i++) {
+      list.add(i + 1);
+    }
+    return list;
   }
   
 }
